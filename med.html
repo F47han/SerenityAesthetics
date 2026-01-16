@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Aesthetics | Premium Medical & Aesthetic Clinic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5d8aa8;
+            --secondary: #f4f0ec;
+            --accent: #e0a87c;
+            --light: #ffffff;
+            --dark: #3a3a3a;
+            --text: #4a4a4a;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            background: #4a6d85;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(93, 138, 168, 0.3);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+        }
+
+        .btn-accent:hover {
+            background: #d19565;
+            box-shadow: 0 6px 25px rgba(224, 168, 124, 0.3);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--light);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(93, 138, 168, 0.05) 0%, rgba(224, 168, 124, 0.05) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(224, 168, 124, 0.08);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(93, 138, 168, 0.05);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--text);
+            max-width: 600px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .badge i {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: var(--text);
+            font-size: 18px;
+        }
+
+        /* Treatments */
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .treatment-card {
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .treatment-img {
+            height: 200px;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 48px;
+        }
+
+        .treatment-content {
+            padding: 25px;
+        }
+
+        .treatment-content h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .treatment-content p {
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-img {
+            height: 300px;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 80px;
+        }
+
+        .member-info {
+            padding: 25px 20px;
+        }
+
+        .member-info h3 {
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+
+        .member-info p.role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .member-info p.bio {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Before/After Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(93, 138, 168, 0.85);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Pricing */
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent);
+            position: relative;
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            background: var(--light);
+            padding: 20px 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            background: var(--secondary);
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-answer.show {
+            padding: 25px;
+            max-height: 500px;
+        }
+
+        /* Appointment Section */
+        .appointment {
+            background: linear-gradient(135deg, var(--primary) 0%, #4a6d85 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .appointment::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .appointment h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .appointment p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+
+        .appointment .btn {
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+        }
+
+        .appointment .btn:hover {
+            background: #d19565;
+            box-shadow: 0 6px 25px rgba(224, 168, 124, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 22px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-column p, .footer-column li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links li a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            margin-right: 15px;
+            min-width: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+            
+            .hero-cta {
+                justify-content: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--light);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            
+            .section-header h2 {
+                font-size: 30px;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            
+            .hero-text p {
+                font-size: 16px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .trust-badges {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Serenity<span>Aesthetics</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#treatments">Treatments</a></li>
+                    <li><a href="#team">Doctors & Staff</a></li>
+                    <li><a href="#gallery">Before & After</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#appointment" class="btn">Book Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Your Journey to Natural Beauty Begins Here</h1>
+                <p>At Serenity Aesthetics, we combine medical expertise with artistic vision to deliver safe, effective, and natural-looking results that enhance your unique features.</p>
+                <div class="hero-cta">
+                    <a href="#appointment" class="btn">Book a Consultation</a>
+                    <a href="#treatments" class="btn btn-outline">Explore Treatments</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div style="width: 400px; height: 400px; background: var(--secondary); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 120px;">
+                    <i class="fas fa-spa"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <div class="container trust-badges">
+        <div class="badge">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Board-Certified</h4>
+            <p>Medical Professionals</p>
+        </div>
+        <div class="badge">
+            <i class="fas fa-check-circle"></i>
+            <h4>FDA-Approved</h4>
+            <p>Treatments & Products</p>
+        </div>
+        <div class="badge">
+            <i class="fas fa-star"></i>
+            <h4>5-Star Rated</h4>
+            <p>By Satisfied Clients</p>
+        </div>
+        <div class="badge">
+            <i class="fas fa-lock"></i>
+            <h4>Privacy</h4>
+            <p>Guaranteed</p>
+        </div>
+    </div>
+
+    <!-- Treatments -->
+    <section id="treatments">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Treatments</h2>
+                <p>We offer a comprehensive range of medical and aesthetic treatments designed to enhance your natural beauty safely and effectively.</p>
+            </div>
+            <div class="treatments-grid">
+                <div class="treatment-card">
+                    <div class="treatment-img">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="treatment-content">
+                        <h3>Injectables</h3>
+                        <p>Botox, dermal fillers, and neuromodulators to smooth wrinkles and restore volume for a refreshed appearance.</p>
+                        <a href="#appointment" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="treatment-card">
+                    <div class="treatment-img">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="treatment-content">
+                        <h3>Laser & Skin Rejuvenation</h3>
+                        <p>Advanced laser treatments for skin resurfacing, pigmentation correction, and overall skin health.</p>
+                        <a href="#appointment" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="treatment-card">
+                    <div class="treatment-img">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="treatment-content">
+                        <h3>Medical Facials</h3>
+                        <p>Customized facial treatments using medical-grade products to address specific skin concerns.</p>
+                        <a href="#appointment" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" style="background: var(--secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Expert Team</h2>
+                <p>Our board-certified physicians and licensed aestheticians are dedicated to providing exceptional care and natural-looking results.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="role">Medical Director</p>
+                        <p class="bio">Board-certified dermatologist with 15+ years of experience in cosmetic and medical dermatology.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p class="role">Plastic Surgeon</p>
+                        <p class="bio">Specializes in minimally invasive procedures and facial aesthetics with over 12 years of experience.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Emma Rodriguez</h3>
+                        <p class="role">Lead Aesthetician</p>
+                        <p class="bio">Licensed aesthetician with expertise in skincare treatments and laser technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real Results, Real Confidence</h2>
+                <p>See the transformative results our clients have achieved with our personalized treatment plans.</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="data:image/webp;base64,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" alt="Treatment Result">
+                    <div class="gallery-overlay">
+                        <h3>Facial Rejuvenation</h3>
+                        <p>Botox & Dermal Fillers</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://th.bing.com/th/id/OIP.ouwcujv3O4ITNDySbDZXrAHaFi?w=261&h=196&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Treatment Result">
+                    <div class="gallery-overlay">
+                        <h3>Skin Resurfacing</h3>
+                        <p>Laser Treatment</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/webp;base64,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" alt="Treatment Result">
+                    <div class="gallery-overlay">
+                        <h3>Body Contouring</h3>
+                        <p>Non-Surgical Solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" style="background: var(--secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent Pricing</h2>
+                <p>We believe in clear, upfront pricing with no hidden fees. All treatments include a complimentary consultation.</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Basic Consultation</h3>
+                    <div class="price">$95 <span>/ session</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 45-minute consultation</li>
+                        <li><i class="fas fa-check"></i> Personalized treatment plan</li>
+                        <li><i class="fas fa-check"></i> Skin analysis</li>
+                        <li><i class="fas fa-check"></i> Product recommendations</li>
+                    </ul>
+                    <a href="#appointment" class="btn">Book Now</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium Package</h3>
+                    <div class="price">$495 <span>/ session</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full facial rejuvenation</li>
+                        <li><i class="fas fa-check"></i> Botox (forehead & eyes)</li>
+                        <li><i class="fas fa-check"></i> Dermal fillers (cheeks)</li>
+                        <li><i class="fas fa-check"></i> Medical-grade skincare</li>
+                        <li><i class="fas fa-check"></i> 3 follow-up visits</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-accent">Book Now</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Laser Treatment</h3>
+                    <div class="price">$275 <span>/ session</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Skin resurfacing</li>
+                        <li><i class="fas fa-check"></i> Pigmentation correction</li>
+                        <li><i class="fas fa-check"></i> Collagen stimulation</li>
+                        <li><i class="fas fa-check"></i> Post-treatment care kit</li>
+                    </ul>
+                    <a href="#appointment" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our treatments, safety protocols, and what to expect.</p>
+            </div>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are your treatments safe?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our treatments are performed by board-certified medical professionals using FDA-approved products and technologies. Your safety is our top priority.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long do results last?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Results vary by treatment. Botox typically lasts 3-4 months, dermal fillers 6-18 months, and laser treatments provide long-term skin improvement with proper maintenance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there any downtime?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most of our treatments have minimal to no downtime. You may experience slight redness or swelling that subsides within 24-48 hours. We'll provide specific aftercare instructions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer payment plans?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible payment options and financing through our partner providers to make our treatments accessible to everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment -->
+    <section class="appointment" id="appointment">
+        <div class="container">
+            <h2>Ready to Begin Your Journey?</h2>
+            <p>Schedule your personalized consultation today and take the first step toward enhanced confidence and natural beauty.</p>
+            <a href="#" class="btn">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Serenity Aesthetics</h3>
+                    <p>Providing premium medical and aesthetic treatments in a safe, comfortable, and private environment since 2010.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Wellness Avenue, Suite 200<br>Los Angeles, CA 90001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(310) 555-1234</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@serenityaesthetics.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Serenity Aesthetics. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('show');
+                
+                if (answer.classList.contains('show')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
